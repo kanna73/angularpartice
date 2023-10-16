@@ -1,0 +1,19 @@
+<div>
+    <p>
+        {{ 'hello' | uppercase }}
+    </p>
+</div>
+<div>
+    <p>
+    </p>
+</div>
+{{ dateobj | date : 'medium' }}<br>
+{{ 12456.7990 | currency}}<br>
+{{ 12456.7990 | currency: 'INR' : 'symbol'}}<br>
+{{ 12456.7990 | currency: 'CAD' : 'symbol-narrow'}}<br>
+{{0.24567 | percent}}<br>
+{{ [1,2,3,4,5]  | slice :2}}<br>
+{{course | json}}
+
+
+            

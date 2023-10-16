@@ -1,0 +1,22 @@
+<label>Server Name </label> <br> 
+<!--input type="text" (input)="OnServerName($event)"-->
+<input type= "text" [(ngModel)]="servername">
+<br>
+<p > {{servername}}</p>
+<button class="btn btn-secondary" [disabled]="!serverCreateOption" (click)="onServerAdd()"> servers "S" Component</button>
+
+<p>Prop value : {{ serverCreateOption }}</p>
+<p *ngIf="ServerCreated =='Created' else beforeServer" >Server Create status : {{ServerCreated}}</p>
+
+<ng-template #beforeServer>
+     server create status : {{ServerCreated}} 
+</ng-template>
+
+<ng-template #afterServer>
+    server create status : {{ServerCreated}} 
+</ng-template>
+
+<p> Servers Status : {{ serversStatus }}</p>
+
+
+<app-server *ngFor="let server of serversList"></app-server>
