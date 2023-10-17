@@ -16,6 +16,11 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    ArtifactName: InsuranceCalculatorBuildArtifact
+
 - script: |
     npm install -g @angular/cli
     npm install
